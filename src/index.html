@@ -12,7 +12,6 @@
 		content="This is a responsive flat design mini portfolio for creative folks who want to showcase their jeandtx online.">
 	<!-- styles -->
 	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/bootstrap-responsive.css" rel="stylesheet">
 	<link href="css/style-single-page.css" rel="stylesheet">
 	<link href="font/css/fontello.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -49,7 +48,7 @@
 					<li><a href="#shona"><em class="icon-user"></em> Shona</a></li>
 					<li><a href="#clement"><em class="icon-user"></em> Clément</a></li>
 					<li><a href="#jeandtx"><em class="icon-user"></em> Jean</a></li>
-					<li><a href="#comments"><em class="icon-doc-text"></em> Comments</a></li>
+					<li><a href="#myForm"><em class="icon-doc-text"></em> Comments</a></li>
 				</ul>
 			</div>
 		</div>
@@ -107,7 +106,7 @@
 				<h3>Student &amp; Futur Ingenier</h3>
 				<p> Hello, I am Jean Doutriaux and a member of the team.
 					Our team would be glad to work with you so do not hesitate to
-					<a href="#comments">
+					<a href="#myForm">
 						add a comment!
 					</a>
 				</p>
@@ -126,11 +125,18 @@
 		</div>
 		<!--END: Profile container-->
 		<!-- Resume container -->
+		<div>
+			<form id="myForm">
+				<input type="text" placeholder="Your Name" name="name">
+				<input type="text" placeholder="Your Email" name="email">
+				<textarea rows="3" placeholder="Your comment" style="width:80%" name="comment"></textarea>
+				<br />
+				<button type="submit" class="btn btn-large" onclick="submitForm()"><em class="icon-paper-plane"></em>
+					SUBMIT</button>	
+			</form>
+		</div>
 		<div id="comments" class="container profile">
 			<h1>Comments</h1>
-			<h3>Don't hesitate to<a href="##myModal" data-toggle="modal">
-					LEAVE A COMMENT</a>
-				!</h3>
 			<table class="table table-dark" id="table">
 				<thead>
 					<tr>
@@ -169,40 +175,10 @@
 		</div>
 		<!-- END: Social Icons -->
 	</div>
-	<!-- Footer -->
-	<div class="footer">
-		<div class="container">
-			<p class="pull-right"><a href="##myModal" role="button" data-toggle="modal"> <em class="icon-mail"></em>
-					LEAVE A COMMENT</a>
-			</p>
-		</div>
-	</div>
-	<!-- Contact form in Modal -->
-	<!-- Modal -->
-	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-		aria-hidden="true">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			<h3 id="myModalLabel"><em class="icon-mail"></em> Contact Me</h3>
-		</div>
-		<div class="modal-body">
-			<form id="myForm">
-				<input type="text" placeholder="Your Name" name="name">
-				<input type="text" placeholder="Your Email" name="email">
-				<textarea rows="3" placeholder="Your comment" style="width:80%" name="comment"></textarea>
-				<br />
-				<button type="submit" class="btn btn-large" onclick="submitForm()"><em class="icon-paper-plane"></em>
-					SUBMIT</button>
-			</form>
-		</div>
-	</div>
 	<!-- Scripts -->
 	<script src="js/vertical-scroll.js"></script>
 	<script src="js/form.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script>
-		$('#myModal').modal('hidden')
-	</script>
 </body>
 
 </html>
