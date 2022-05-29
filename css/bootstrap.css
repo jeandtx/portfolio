@@ -4079,13 +4079,6 @@ input[type="submit"].btn.btn-mini {
 	top: 0;
 }
 
-.navbar-fixed-top .navbar-inner,
-.navbar-static-top .navbar-inner {
-	/*-webkit-box-shadow: 0 1px 10px rgba(0,0,0,.1);
-  -moz-box-shadow: 0 1px 10px rgba(0,0,0,.1);
-  box-shadow: 0 1px 10px rgba(0,0,0,.1);*/
-}
-
 .navbar-fixed-bottom {
 	bottom: 0;
 }
@@ -6194,9 +6187,6 @@ button.close {
 }
 
 @media (max-width: 480px) {
-	.nav-collapse {
-		-webkit-transform: translate3d(0, 0, 0);
-	}
 
 	.page-header h1 small {
 		display: block;
