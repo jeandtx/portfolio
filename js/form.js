@@ -13,36 +13,31 @@ function submitForm() {
 }
 
 
-function refresh() {
-    var formResult = JSON.parse(localStorage.getItem("form"));
+var formResult = JSON.parse(localStorage.getItem("form"));
 
-    formResult.forEach(element => {
+formResult.forEach(element => {
 
-        var tr = document.createElement("tr");
+    var tr = document.createElement("tr");
 
-        var td1 = document.createElement("td");
-        td1.textContent = element.name;
-        var td2 = document.createElement("td");
-        td2.textContent = element.email;
-        var td3 = document.createElement("td");
-        td3.textContent = element.comment;
+    var td1 = document.createElement("td");
+    td1.textContent = element.name;
+    var td2 = document.createElement("td");
+    td2.textContent = element.email;
+    var td3 = document.createElement("td");
+    td3.textContent = element.comment;
 
-        tr.appendChild(td1);
-        tr.appendChild(td2);
-        tr.appendChild(td3);
-        if (element.name != "" && element.email != "" && element.comment != "") {
-            document.getElementById("table").appendChild(tr);
-        } else {
-            alert("Veuillez remplir tous les champs");
-        }
-    });
-
-}
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    if (element.name != "" && element.email != "" && element.comment != "") {
+        document.getElementById("table").appendChild(tr);
+    } else {
+        alert("Veuillez remplir tous les champs");
+    }
+});
 
 function clearTable() {
     localStorage.clear();
     localStorage.setItem("form", JSON.stringify([]));
     location.reload();
 }
-
-refresh();
